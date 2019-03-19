@@ -1,4 +1,7 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Foods PWA
+
+[![CircleCI](https://circleci.com/gh/matheusps/foods-pwa.svg?style=svg)](https://circleci.com/gh/matheusps/foods-pwa)
+[![codecov](https://codecov.io/gh/matheusps/foods-pwa/branch/master/graph/badge.svg)](https://codecov.io/gh/matheusps/foods-pwa)
 
 ## Available Scripts
 

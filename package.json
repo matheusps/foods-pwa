@@ -1,22 +1,19 @@
 {
   "name": "foods-pwa",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "dependencies": {
-    "@types/jest": "24.0.11",
-    "@types/node": "11.11.3",
-    "@types/react": "16.8.8",
-    "@types/react-dom": "16.8.2",
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
-    "react-scripts": "2.1.8",
-    "typescript": "3.3.3333"
+    "react-scripts": "2.1.8"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "eject": "react-scripts eject",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "test:coverage": "yarn test --collectCoverage",
+    "codecov": "yarn test:coverage && codecov -f coverage/*.json"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -26,5 +23,13 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "devDependencies": {
+    "@types/jest": "^24.0.11",
+    "@types/node": "^11.11.3",
+    "@types/react": "^16.8.8",
+    "@types/react-dom": "^16.8.2",
+    "codecov": "^3.2.0",
+    "typescript": "^3.3.3333"
+  }
 }
