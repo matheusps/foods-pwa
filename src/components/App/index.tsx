@@ -1,15 +1,15 @@
 import React, { Component } from 'react'
 
-import iceCream from './ice-cream.svg'
+import icon from './icon.png'
 import './style.css'
 
 class App extends Component {
   render() {
     return (
       <div className="app">
-        <img src={iceCream} className="logo" aria-label="ice-cream" />
-
-        <p>This starter tastes awesome!</p>
+        <h1>
+          Foods <br /> <strong>PWA</strong>
+        </h1>
       </div>
     )
   }

@@ -1,8 +1,14 @@
-.logo {
-  pointer-events: none;
-  position: absolute;
-  right: auto;
-  top: 25%;
-  left: 10%;
-  bottom: auto;
+.app {
+  text-align: center;
+}
+
+.app h1 {
+  padding-top: 25%;
+  font-size: 7rem;
+  color: rgb(212, 176, 108);
+}
+
+.app h1 strong {
+  font-weight: bold;
+  color: rgb(182, 151, 94);
 }
