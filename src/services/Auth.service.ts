@@ -1,13 +1,13 @@
-import history from '../../config/history'
+import history from '../history'
 import auth0, { Auth0DecodedHash, WebAuth } from 'auth0-js'
 
-export default class Auth implements Authentication {
+export default class AuthService implements IAuthentication {
   private accessToken: string
   private idToken: string
   private expiresAt: number
   private auth0: WebAuth
 
-  constructor(config: AuthConfig) {
+  constructor(config: IAuthConfig) {
     this.accessToken = ''
     this.idToken = ''
     this.expiresAt = 0

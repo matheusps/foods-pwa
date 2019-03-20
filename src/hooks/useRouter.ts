@@ -5,10 +5,10 @@ import UniversalRouter, { Routes } from 'universal-router'
 
 import useLocation from '../hooks/useLocation'
 
-function useRouter(
+const useRouter = (
   routes: Routes<any, { default: React.ComponentType }>,
   history: History<any>
-) {
+) => {
   const location = useLocation(history)
   const router = useMemo(() => new UniversalRouter(routes), [routes])
   const [Component, setComponent] = useState<React.ReactType>('div')

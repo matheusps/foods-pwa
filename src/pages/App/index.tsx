@@ -1,21 +1,10 @@
 import React, { useEffect, useContext } from 'react'
-import { History } from 'history'
-
-import Auth from '../Auth'
 
 import './style.css'
-import { AuthContext } from '../../contexts/AuthContext'
-import Link from '../Router/Link'
+import AuthContext from '../../contexts/AuthContext'
+import { Link } from '../../components/Router'
 
-interface Props {
-  history: History
-}
-
-interface Context {
-  auth: Authentication
-}
-
-const App = ({ history }: Props) => {
+const App = () => {
   const { auth } = useContext(AuthContext)
 
   useEffect(() => {

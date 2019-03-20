@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
-import history from './config/history'
+import history from './history'
 import routes from './routes'
 import { Router } from './components/Router'
 
@@ -9,10 +9,10 @@ import * as serviceWorker from './serviceWorker'
 
 import './index.css'
 import { AuthProvider } from './contexts/AuthContext'
-import Auth from './components/Auth'
-import authConfig from './config/auth'
+import AuthService from './services/Auth.service'
+import authConfig from './config'
 
-const auth = new Auth(authConfig)
+const auth = new AuthService(authConfig)
 
 const Root = () => (
   <AuthProvider value={{ isAuth: false, auth: auth }}>

@@ -2,10 +2,11 @@ import { createContext } from 'react'
 
 export interface IAuthContext {
   isAuth: boolean
-  auth: Authentication
+  auth: IAuthentication
 }
 
 const AuthContext = createContext<IAuthContext>(null!)
 const { Provider, Consumer } = AuthContext
 
-export { AuthContext, Provider as AuthProvider, Consumer as AuthConsumer }
+export default AuthContext
+export { Provider as AuthProvider, Consumer as AuthConsumer }

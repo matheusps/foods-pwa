@@ -3,15 +3,15 @@ import { Routes } from 'universal-router'
 const routes: Routes<any, any> = [
   {
     path: '/',
-    action: () => import('./components/App'),
+    action: () => import('./pages/App'),
   },
   {
     path: '/home',
-    action: () => import('./components/Home'),
+    action: () => import('./pages/Home'),
   },
   {
     path: '/callback',
-    action: () => import('./components/Callback'),
+    action: () => import('./pages/Callback'),
   },
 ]
 

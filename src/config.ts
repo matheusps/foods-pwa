@@ -1,4 +1,4 @@
-const authConfig: AuthConfig = {
+const authConfig: IAuthConfig = {
   domain: 'matheusps.auth0.com',
   clientID: 'kvdH3Y0PQDugcCS7k3iJucQxYnM3JSKF',
   redirectUri: 'http://localhost:3000/callback',

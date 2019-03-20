@@ -1,12 +1,12 @@
 import React, { useContext, Fragment } from 'react'
-import Auth from '../Auth'
-import { AuthContext } from '../../contexts/AuthContext'
+import AuthContext from '../../contexts/AuthContext'
+
+import './style.css'
 
 const Home = () => {
   const { auth } = useContext(AuthContext)
-
   return (
-    <div className="container">
+    <div className="home">
       {auth.isAuthenticated() ? (
         <Fragment>
           <h4>You are logged in!</h4>

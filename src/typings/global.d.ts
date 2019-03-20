@@ -1,4 +1,4 @@
-interface Authentication {
+interface IAuthentication {
   handleAuthentication(): void
   getAccessToken(): any
   getIdToken(): any
@@ -9,12 +9,18 @@ interface Authentication {
   isAuthenticated(): boolean
 }
 
-interface AuthConfig {
+interface IAuthConfig {
   domain: string
   clientID: string
   redirectUri: string
   responseType: string
   scope: string
+}
+
+interface IRouter {
+  routes: Routes<any, { default: React.ComponentType }>
+  history: History<any>
+  fallback: NonNullable<React.ReactNode> | null
 }
 
 interface PageProps {}

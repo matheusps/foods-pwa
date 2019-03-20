@@ -3,7 +3,7 @@ import { useCallback, useContext } from 'react'
 
 import HistoryContext from '../../contexts/HistoryContext'
 
-function Link(props: React.AnchorHTMLAttributes<HTMLAnchorElement>) {
+const Link = (props: React.AnchorHTMLAttributes<HTMLAnchorElement>) => {
   const history = useContext(HistoryContext)
   const handleClick = useCallback(
     (ev: React.MouseEvent<HTMLAnchorElement>) => {
