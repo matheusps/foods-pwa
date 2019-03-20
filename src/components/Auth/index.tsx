@@ -1,18 +1,18 @@
-import history from '../../history'
+import history from '../../config/history'
 import auth0, { Auth0DecodedHash, WebAuth } from 'auth0-js'
 
-export default class Auth {
-  private accessToken: any = ''
-  private idToken: any = ''
-  private expiresAt: any = 0
+export default class Auth implements Authentication {
+  private accessToken: string
+  private idToken: string
+  private expiresAt: number
+  private auth0: WebAuth
 
-  private auth0: WebAuth = new auth0.WebAuth({
-    domain: 'matheusps.auth0.com',
-    clientID: 'kvdH3Y0PQDugcCS7k3iJucQxYnM3JSKF',
-    redirectUri: 'http://localhost:3000/callback',
-    responseType: 'token id_token',
-    scope: 'openid',
-  })
+  constructor(config: AuthConfig) {
+    this.accessToken = ''
+    this.idToken = ''
+    this.expiresAt = 0
+    this.auth0 = new auth0.WebAuth(config)
+  }
 
   handleAuthentication = () =>
     this.auth0.parseHash((err, authResult) => {
@@ -31,8 +31,8 @@ export default class Auth {
 
   setSession = (authResult: Auth0DecodedHash) => {
     localStorage.setItem('isLoggedIn', 'true')
-    this.accessToken = authResult.accessToken
-    this.idToken = authResult.idToken
+    this.accessToken = authResult.accessToken!
+    this.idToken = authResult.idToken!
     this.expiresAt = authResult.expiresIn! * 1000 + new Date().getTime()
     history.replace('/home')
   }

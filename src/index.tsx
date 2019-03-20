@@ -6,12 +6,14 @@ import App from './components/App'
 import Auth from './components/Auth'
 import Home from './components/Home'
 import Callback from './components/Callback'
-import history from './history'
+import history from './config/history'
+import authConfig from './config/auth'
+
 import * as serviceWorker from './serviceWorker'
 
 import './index.css'
 
-const auth = new Auth()
+const auth = new Auth(authConfig)
 
 const handleAuthentication = ({ location }: RouteComponentProps) => {
   if (/access_token|id_token|error/.test(location.hash)) {
