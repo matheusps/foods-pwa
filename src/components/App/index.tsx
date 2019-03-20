@@ -1,17 +1,22 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useContext } from 'react'
 import { History } from 'history'
 
 import Auth from '../Auth'
 
 import './style.css'
+import { AuthContext } from '../../contexts/AuthContext'
+import Link from '../Router/Link'
 
 interface Props {
   history: History
-  auth: Auth
 }
 
-const App = ({ history, auth }: Props) => {
-  const goTo = (route: string) => history.replace(`/${route}`)
+interface Context {
+  auth: Authentication
+}
+
+const App = ({ history }: Props) => {
+  const { auth } = useContext(AuthContext)
 
   useEffect(() => {
     localStorage.getItem('isLoggedIn') === 'true' && auth.renewSession()
@@ -19,7 +24,7 @@ const App = ({ history, auth }: Props) => {
 
   return (
     <div className="app">
-      <button onClick={() => goTo('home')}>Go Home</button>
+      <Link href="/home">Go home</Link>
       {auth.isAuthenticated() ? (
         <button onClick={() => auth.logout()}>Logout</button>
       ) : (

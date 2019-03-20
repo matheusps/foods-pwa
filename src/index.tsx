@@ -1,40 +1,27 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 import ReactDOM from 'react-dom'
-import { Route, Router, RouteComponentProps } from 'react-router-dom'
 
-import App from './components/App'
-import Auth from './components/Auth'
-import Home from './components/Home'
-import Callback from './components/Callback'
 import history from './config/history'
-import authConfig from './config/auth'
+import routes from './routes'
+import { Router } from './components/Router'
 
 import * as serviceWorker from './serviceWorker'
 
 import './index.css'
+import { AuthProvider } from './contexts/AuthContext'
+import Auth from './components/Auth'
+import authConfig from './config/auth'
 
 const auth = new Auth(authConfig)
 
-const handleAuthentication = ({ location }: RouteComponentProps) => {
-  if (/access_token|id_token|error/.test(location.hash)) {
-    auth.handleAuthentication()
-  }
-}
-
 const Root = () => (
-  <Router history={history}>
-    <Fragment>
-      <Route path="/" render={props => <App auth={auth} {...props} />} />
-      <Route path="/home" render={props => <Home auth={auth} {...props} />} />
-      <Route
-        path="/callback"
-        render={props => {
-          handleAuthentication(props)
-          return <Callback />
-        }}
-      />
-    </Fragment>
-  </Router>
+  <AuthProvider value={{ isAuth: false, auth: auth }}>
+    <Router
+      history={history}
+      routes={routes}
+      fallback={<div>Loading...</div>}
+    />
+  </AuthProvider>
 )
 
 ReactDOM.render(<Root />, document.getElementById('root'))
