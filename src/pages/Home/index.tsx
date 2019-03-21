@@ -1,5 +1,5 @@
 import React, { useContext, Fragment } from 'react'
-import AuthContext from '../../contexts/AuthContext'
+import { AuthContext } from '../../modules/Auth'
 
 import './style.css'
 

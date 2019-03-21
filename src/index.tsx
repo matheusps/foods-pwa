@@ -8,8 +8,7 @@ import { Router } from './components/Router'
 import * as serviceWorker from './serviceWorker'
 
 import './index.css'
-import { AuthProvider } from './contexts/AuthContext'
-import AuthService from './services/Auth.service'
+import { AuthProvider, AuthService } from './modules/Auth'
 
 const Root = () => (
   <AuthProvider value={{ isAuth: false, auth: AuthService }}>

@@ -1,6 +1,6 @@
-import history from '../history'
+import history from '../../history'
 import auth0, { Auth0DecodedHash, WebAuth } from 'auth0-js'
-import authConfig from '../config'
+import authConfig from './config'
 
 class AuthService implements IAuthentication {
   private accessToken: string

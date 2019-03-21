@@ -1,7 +1,7 @@
 import React, { useEffect, useContext } from 'react'
 
 import './style.css'
-import AuthContext from '../../contexts/AuthContext'
+import { AuthContext } from '../../modules/Auth'
 
 interface IPage {
   readonly children: any
