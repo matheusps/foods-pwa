@@ -7,14 +7,16 @@ interface IPage {
   readonly children: any
 }
 
-const Page = ({ children }: IPage) => {
+const ProtectedPage = ({ children }: IPage) => {
   const { auth } = useContext(AuthContext)
 
   useEffect(() => {
-    localStorage.getItem('isLoggedIn') === 'true' && auth.renewSession()
+    localStorage.getItem('isLoggedIn') === 'true'
+      ? auth.renewSession()
+      : auth.logout()
   }, [])
 
   return <div className="page">{children}</div>
 }
 
-export default Page
+export default ProtectedPage

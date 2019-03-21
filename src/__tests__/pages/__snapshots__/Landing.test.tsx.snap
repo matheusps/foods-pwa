@@ -5,9 +5,7 @@ Object {
   "asFragment": [Function],
   "baseElement": <body>
     <div>
-      <div
-        class="page"
-      >
+      <div>
         <h1>
           This is a beautiful landing page
         </h1>
@@ -16,13 +14,14 @@ Object {
         >
           Go to home
         </a>
+        <button>
+          Login
+        </button>
       </div>
     </div>
   </body>,
   "container": <div>
-    <div
-      class="page"
-    >
+    <div>
       <h1>
         This is a beautiful landing page
       </h1>
@@ -31,6 +30,9 @@ Object {
       >
         Go to home
       </a>
+      <button>
+        Login
+      </button>
     </div>
   </div>,
   "debug": [Function],
