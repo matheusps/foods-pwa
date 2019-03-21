@@ -16,3 +16,7 @@ interface IAuthConfig {
   responseType: string
   scope: string
 }
+
+interface IAuthContext {
+  auth: IAuthentication
+}

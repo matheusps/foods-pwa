@@ -20,7 +20,7 @@ class AuthService implements IAuthentication {
       if (authResult && authResult.accessToken && authResult.idToken) {
         this.setSession(authResult)
       } else if (err) {
-        history.replace('/home')
+        history.replace('/')
         console.log(err)
         alert(`Error: ${err.error}. Check the console for further details.`)
       }
@@ -60,7 +60,7 @@ class AuthService implements IAuthentication {
     this.idToken = ''
     this.expiresAt = 0
     localStorage.removeItem('isLoggedIn')
-    history.replace('/home')
+    history.replace('/')
   }
 
   isAuthenticated = () => new Date().getTime() < this.expiresAt

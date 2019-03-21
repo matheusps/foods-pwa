@@ -2,14 +2,15 @@ import React from 'react'
 
 import './style.css'
 import { Link } from '../../modules/Router'
-import Page from '../../components/Page'
+import LoginBtn from '../../components/LoginBtn'
 
 const Landing = () => {
   return (
-    <Page>
+    <div>
       <h1>This is a beautiful landing page</h1>
       <Link href="/home">Go to home</Link>
-    </Page>
+      <LoginBtn />
+    </div>
   )
 }
 

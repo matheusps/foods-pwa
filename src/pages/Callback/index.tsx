@@ -7,10 +7,11 @@ const Callback = () => {
   const { auth } = useContext(AuthContext)
 
   useEffect(() => {
-    if (/access_token|id_token|error/.test(window.location.hash)) {
+    let location = window.location.hash
+    if (/access_token|id_token|error/.test(location)) {
       auth.handleAuthentication()
     }
-  }, [])
+  }, [location])
 
   return (
     <div className="callback">
