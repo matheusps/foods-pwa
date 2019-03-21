@@ -3,7 +3,7 @@ import { Routes } from 'universal-router'
 const routes: Routes<any, any> = [
   {
     path: '/',
-    action: () => import('./pages/App'),
+    action: () => import('./pages/Landing'),
   },
   {
     path: '/home',

@@ -1,7 +1,8 @@
 import history from '../history'
 import auth0, { Auth0DecodedHash, WebAuth } from 'auth0-js'
+import authConfig from '../config'
 
-export default class AuthService implements IAuthentication {
+class AuthService implements IAuthentication {
   private accessToken: string
   private idToken: string
   private expiresAt: number
@@ -64,3 +65,5 @@ export default class AuthService implements IAuthentication {
 
   isAuthenticated = () => new Date().getTime() < this.expiresAt
 }
+
+export default new AuthService(authConfig)
