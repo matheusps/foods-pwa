@@ -5,4 +5,4 @@ const HistoryContext = React.createContext<History>(null!)
 const { Provider, Consumer } = HistoryContext
 
 export default HistoryContext
-export { Provider as HistoryProvider, Consumer }
+export { Provider as HistoryProvider, Consumer as HistoryConsumer }

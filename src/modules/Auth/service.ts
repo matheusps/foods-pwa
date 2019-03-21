@@ -1,4 +1,4 @@
-import history from '../../history'
+import { history } from '../Router'
 import auth0, { Auth0DecodedHash, WebAuth } from 'auth0-js'
 import authConfig from './config'
 

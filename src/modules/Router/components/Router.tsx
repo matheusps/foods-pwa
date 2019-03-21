@@ -1,7 +1,7 @@
 import React from 'react'
 
-import useRouter from '../../hooks/useRouter'
-import { HistoryProvider } from '../../contexts/HistoryContext'
+import useRouter from '../hooks/useRouter'
+import { HistoryProvider } from '../context'
 
 const Router = ({ routes, history, fallback }: IRouter) => {
   const Component = useRouter(routes, history)

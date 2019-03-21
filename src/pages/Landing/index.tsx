@@ -1,7 +1,7 @@
 import React from 'react'
 
 import './style.css'
-import { Link } from '../../components/Router'
+import { Link } from '../../modules/Router'
 import Page from '../../components/Page'
 
 const Landing = () => {

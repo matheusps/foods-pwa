@@ -1,9 +1,8 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
-import history from './history'
+import { history, Router } from './modules/Router'
 import routes from './routes'
-import { Router } from './components/Router'
 
 import * as serviceWorker from './serviceWorker'
 

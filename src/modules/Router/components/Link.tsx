@@ -1,7 +1,7 @@
 import React from 'react'
 import { useCallback, useContext } from 'react'
 
-import HistoryContext from '../../contexts/HistoryContext'
+import HistoryContext from '../context'
 
 const Link = (props: React.AnchorHTMLAttributes<HTMLAnchorElement>) => {
   const history = useContext(HistoryContext)
