@@ -1,21 +1,22 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
+import { ThemeProvider } from 'styled-components'
 
 import { AuthProvider } from './modules/Auth'
 import { history, Router } from './modules/Router'
+import themes from './themes'
 import routes from './routes'
 
 import * as serviceWorker from './serviceWorker'
 
 import './index.css'
+import LoadingPage from './pages/Loading/index'
 
 const Root = () => (
   <AuthProvider>
-    <Router
-      history={history}
-      routes={routes}
-      fallback={<div>Loading...</div>}
-    />
+    <ThemeProvider theme={themes.light}>
+      <Router history={history} routes={routes} fallback={<LoadingPage />} />
+    </ThemeProvider>
   </AuthProvider>
 )
 
