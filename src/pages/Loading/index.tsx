@@ -1,13 +1,13 @@
 import React from 'react'
-import { MoonLoader } from 'react-spinners'
 
-import Container from '../../components/Container'
+import Loader from '../../components/Styleguide/Loader'
+import Page from '../../components/Page/index'
 
 const LoadingPage = () => {
   return (
-    <Container full justify="center" items="center">
-      <MoonLoader />
-    </Container>
+    <Page className="justify-center items-center">
+      <Loader />
+    </Page>
   )
 }
 

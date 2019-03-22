@@ -18,7 +18,7 @@ const routes: Routes<any, any> = [
   },
   {
     path: '/home',
-    action: () => shieldRoute('./pages/Home'),
+    action: () => import('./pages/Home'),
   },
   {
     path: '/callback',

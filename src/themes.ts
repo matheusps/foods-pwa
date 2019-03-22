@@ -1,17 +1,34 @@
-const dark = {
-  primary: 'blue',
-  secondary: 'green',
-  text: 'white',
-  background: 'black',
-  backgroundSecondary: '#212121',
+interface Theme {
+  primary: string
+  info: string
+  success: string
+  error: string
+  warning: string
+  text: string
+  textMutted: string
+  base: string
 }
 
-const light = {
-  primary: 'pink',
-  secondary: 'azure',
-  text: 'black',
-  background: 'white',
-  backgroundSecondary: '#fafafa',
+const dark: Theme = {
+  primary: '#B23AFC',
+  info: '#1232FF',
+  success: '#45DF31',
+  error: '#FE2472',
+  warning: '#FF9C09',
+  text: '#FFFFFF',
+  textMutted: '#9FA5AA',
+  base: '#212121',
+}
+
+const light: Theme = {
+  primary: '#B23AFC',
+  info: '#1232FF',
+  success: '#45DF31',
+  error: '#FE2472',
+  warning: '#FF9C09',
+  text: '#000',
+  textMutted: '#9FA5AA',
+  base: '#FFF',
 }
 
 const themes = {

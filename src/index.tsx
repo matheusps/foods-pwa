@@ -10,11 +10,12 @@ import routes from './routes'
 import * as serviceWorker from './serviceWorker'
 
 import './index.css'
+import 'tachyons/css/tachyons.css'
 import LoadingPage from './pages/Loading/index'
 
 const Root = () => (
   <AuthProvider>
-    <ThemeProvider theme={themes.light}>
+    <ThemeProvider theme={themes.dark}>
       <Router history={history} routes={routes} fallback={<LoadingPage />} />
     </ThemeProvider>
   </AuthProvider>
