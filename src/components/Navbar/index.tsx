@@ -24,10 +24,10 @@ const Navbar = ({ className }: Props) => {
 
   return (
     <Container className={navbarClasses}>
-      <Link>
+      <Link href="/home">
         <FiHome size="30" />
       </Link>
-      <Link>
+      <Link href="/settings">
         <FiUser size="30" />
       </Link>
       <Link>

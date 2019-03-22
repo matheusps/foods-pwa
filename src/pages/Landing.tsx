@@ -1,8 +1,7 @@
 import React from 'react'
 
-import './style.css'
-import { Link } from '../../modules/Router'
-import LoginBtn from '../../components/LoginBtn'
+import { Link } from '../modules/Router'
+import LoginBtn from '../components/LoginBtn'
 
 const Landing = () => {
   return (

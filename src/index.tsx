@@ -11,12 +11,18 @@ import * as serviceWorker from './serviceWorker'
 
 import './index.css'
 import 'tachyons/css/tachyons.css'
-import LoadingPage from './pages/Loading/index'
+import LoadingPage from './pages/Loading'
+import Wrapper from './pages/Wrapper'
 
 const Root = () => (
   <AuthProvider>
-    <ThemeProvider theme={themes.dark}>
-      <Router history={history} routes={routes} fallback={<LoadingPage />} />
+    <ThemeProvider theme={themes.light}>
+      <Router
+        history={history}
+        routes={routes}
+        fallback={<LoadingPage />}
+        Wrapper={Wrapper}
+      />
     </ThemeProvider>
   </AuthProvider>
 )
