@@ -17,15 +17,19 @@ const routes: Routes<any, any> = [
     action: () => import('./pages/Landing'),
   },
   {
-    path: '/home',
-    action: () => shieldRoute('./pages/Home'),
-  },
-  {
     path: '/callback',
     action: () => {
       authenticate()
       return import('./pages/Loading')
     },
+  },
+  {
+    path: '/home',
+    action: () => import('./pages/Home'),
+  },
+  {
+    path: '/settings',
+    action: () => import('./pages/Settings'),
   },
 ]
 
