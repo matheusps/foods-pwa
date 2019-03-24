@@ -13,17 +13,20 @@ import './index.css'
 import 'tachyons/css/tachyons.css'
 import LoadingPage from './pages/Loading'
 import Wrapper from './pages/Wrapper'
+import { StoreProvider } from './state'
 
 const Root = () => (
   <AuthProvider>
-    <ThemeProvider theme={themes.light}>
-      <Router
-        history={history}
-        routes={routes}
-        fallback={<LoadingPage />}
-        Wrapper={Wrapper}
-      />
-    </ThemeProvider>
+    <StoreProvider>
+      <ThemeProvider theme={themes.light}>
+        <Router
+          history={history}
+          routes={routes}
+          fallback={<LoadingPage />}
+          Wrapper={Wrapper}
+        />
+      </ThemeProvider>
+    </StoreProvider>
   </AuthProvider>
 )
 
