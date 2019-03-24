@@ -3,7 +3,7 @@ import React from 'react'
 import Container from '../components/Styleguide/Container'
 import LogoutBtn from '../components/LogoutBtn'
 
-const Home = () => {
+const HomePage = () => {
   return (
     <Container className="h-100 w-100 flex">
       <h1>App home</h1>
@@ -12,4 +12,4 @@ const Home = () => {
   )
 }
 
-export default Home
+export default HomePage

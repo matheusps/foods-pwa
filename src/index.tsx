@@ -12,7 +12,7 @@ import * as serviceWorker from './serviceWorker'
 import './index.css'
 import 'tachyons/css/tachyons.css'
 import LoadingPage from './pages/Loading'
-import Wrapper from './pages/Wrapper'
+import PagesWrapper from './pages/PagesWrapper'
 import { StoreProvider } from './state'
 
 const Root = () => (
@@ -23,7 +23,7 @@ const Root = () => (
           history={history}
           routes={routes}
           fallback={<LoadingPage />}
-          Wrapper={Wrapper}
+          Wrapper={PagesWrapper}
         />
       </ThemeProvider>
     </StoreProvider>

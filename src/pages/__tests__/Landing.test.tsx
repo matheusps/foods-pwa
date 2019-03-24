@@ -1,13 +1,13 @@
 import React from 'react'
 import { render } from 'react-testing-library'
-import Landing from '../../pages/Landing'
+import LandingPage from '../../pages/Landing'
 import { AuthProvider } from '../../modules/Auth'
 
 describe('Landing Page', () => {
   it('should match snapshot', () => {
     const component = render(
       <AuthProvider>
-        <Landing />
+        <LandingPage />
       </AuthProvider>
     )
     expect(component).toMatchSnapshot()

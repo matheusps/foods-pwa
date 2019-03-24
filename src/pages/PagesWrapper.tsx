@@ -6,7 +6,7 @@ interface Props {
   readonly children: any
 }
 
-const Wrapper = ({ children }: Props) => {
+const PagesWrapper = ({ children }: Props) => {
   return (
     <Fragment>
       <Navbar />
@@ -15,4 +15,4 @@ const Wrapper = ({ children }: Props) => {
   )
 }
 
-export default Wrapper
+export default PagesWrapper

@@ -3,7 +3,7 @@ import React from 'react'
 import { Link } from '../modules/Router'
 import LoginBtn from '../components/LoginBtn'
 
-const Landing = () => {
+const LandingPage = () => {
   return (
     <div>
       <h1>This is a beautiful landing page</h1>
@@ -13,4 +13,4 @@ const Landing = () => {
   )
 }
 
-export default Landing
+export default LandingPage
