@@ -1,6 +1,6 @@
 import React from 'react'
 import classNames from 'classnames'
-import { Container } from '../Styleguide'
+import { Container } from './Styleguide'
 
 interface Props {
   /** chilren */

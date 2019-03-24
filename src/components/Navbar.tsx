@@ -2,9 +2,9 @@ import React from 'react'
 import classNames from 'classnames'
 import { FiHome, FiUser, FiLayers, FiHash } from 'react-icons/fi'
 
-import Container from '../Styleguide/Container'
-import useMedia, { presets } from '../../hooks/useMedia'
-import { Link } from '../../modules/Router'
+import Container from './Styleguide/Container'
+import useMedia, { presets } from '../hooks/useMedia'
+import { Link } from '../modules/Router'
 
 interface Props {
   className?: string
