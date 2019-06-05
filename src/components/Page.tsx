@@ -1,6 +1,6 @@
 import React from 'react'
 import classNames from 'classnames'
-import { Container } from './Styleguide'
+import { FlexContainer } from './Styleguide'
 
 interface Props {
   /** chilren */
@@ -15,7 +15,7 @@ interface Props {
  */
 const Page = ({ children, className }: Props) => {
   const pageClasses = classNames(className, 'flex w-100 vh-100')
-  return <Container className={pageClasses}> {children}</Container>
+  return <FlexContainer className={pageClasses}> {children}</FlexContainer>
 }
 
 export default Page

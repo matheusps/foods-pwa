@@ -1,3 +1,3 @@
-import Container from './Container'
+import FlexContainer from './Flex/Container'
 
-export { Container }
+export { FlexContainer }

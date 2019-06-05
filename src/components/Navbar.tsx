@@ -2,7 +2,7 @@ import React from 'react'
 import classNames from 'classnames'
 import { FiHome, FiUser, FiLayers, FiHash } from 'react-icons/fi'
 
-import Container from './Styleguide/Container'
+import { FlexContainer } from './Styleguide'
 import { Link } from '../modules/Router'
 import useAuth from '../modules/Auth/useAuth'
 import useDevice from '../hooks/useDevice'
@@ -23,7 +23,7 @@ const Navbar = ({ className }: Props) => {
 
   const navbarClasses = classNames(
     className,
-    'fixed flex w-100 left-0 right-0 justify-around z-max',
+    'fixed left-0 right-0 z-max pa2',
     mobile ? 'bottom-0' : 'top-0'
   )
 
@@ -48,7 +48,7 @@ const Navbar = ({ className }: Props) => {
 
   return (
     <>
-      <Container className={navbarClasses}>
+      <FlexContainer justify="space-around" className={navbarClasses}>
         {isAuthenticated() ? (
           <>
             {authLinks.map(link => (
@@ -58,7 +58,7 @@ const Navbar = ({ className }: Props) => {
         ) : (
           <a onClick={login}>Login</a>
         )}
-      </Container>
+      </FlexContainer>
       {!mobile && <Spacer />}
     </>
   )
